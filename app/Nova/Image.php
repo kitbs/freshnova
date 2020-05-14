@@ -5,6 +5,7 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\MorphTo;
+use Laravel\Nova\Fields\Image as ImageField;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Image extends Resource
@@ -42,6 +43,8 @@ class Image extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            ImageField::make('Image', 'filename'),
 
             MorphTo::make('Imageable', 'imageable')
                 ->default(auth()->id())
