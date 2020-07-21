@@ -34,8 +34,6 @@ class Post extends Resource
         'id', 'title',
     ];
 
-    public static $lowercase = true;
-
     /**
      * Get the fields displayed by the resource.
      *
@@ -107,9 +105,4 @@ class Post extends Resource
     {
         return [];
     }
-
-    // public static function sentenceLabel()
-    // {
-    //     return __('URL post');
-    // }
 }
